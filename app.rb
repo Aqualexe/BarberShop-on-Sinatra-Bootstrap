@@ -7,7 +7,7 @@ end
 
 helpers do
   def username
-    session[:identity] ? session[:identity] : 'Hello stranger'
+    session[:identity] ? session[:identity] : 'Вход'
   end
 end
 
@@ -27,6 +27,16 @@ get '/login/form' do
   erb :login_form
 end
 
+get '/About' do
+  erb :About
+end
+
+get '/sign_up' do
+    erb :sign_up
+end
+get '/Contacts' do
+    erb :contacts
+end
 post '/login/attempt' do
   session[:identity] = params['username']
   where_user_came_from = session[:previous_url] || '/'
