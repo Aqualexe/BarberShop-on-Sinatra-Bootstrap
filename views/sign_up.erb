@@ -11,13 +11,18 @@
     <label for="InputNumber">Ваш номер</label>
     <input name = "user_number" type="datetime" class="form-control" id="InputNumber" placeholder="Введите Ваш номер телефона">
   </div>
-  <form action = "sign_up" method="POST">
-  <p><select name="select" size="3" multiple>
-    <p> Выберите вашего парикмахера
-   <option selected value="s1">Walter White</option>
-   <option value="s2">Jessie Pinkman</option>
-   <option value="s3">Gus Fring</option>
+  <p> Выберите вашего парикмахера </p>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Предпочтение</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Выбор...</option>
+    <option value="1">Jessie Pinkman</option>
+    <option value="2">Walter White</option>
+    <option value="3">Gus Fring</option>
   </select>
- </form>
-  <button type="tel" class="btn btn-primary">Записаться</button>
+  <div class="custom-control custom-checkbox my-1 mr-sm-2">
+    <input type="checkbox" class="custom-control-input" id="customControlInline">
+    <label class="custom-control-label" for="customControlInline">Запомнить мой выбор</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary my-1">Отправить</button>
 </form>
