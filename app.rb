@@ -37,6 +37,14 @@ end
 get '/Contacts' do
     erb :contacts
 end
+
+post '/
+sign_up' do
+   @userfirstname = params [:user_firstname]
+   @usersecondname = params [:SecondName]
+   @usernumber = params [:user_number]
+   @bareber = params [:barber]
+end
 post '/login/attempt' do
   session[:identity] = params['username']
   where_user_came_from = session[:previous_url] || '/'
