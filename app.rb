@@ -38,8 +38,7 @@ get '/Contacts' do
     erb :contacts
 end
 
-post '/
-sign_up' do
+post '/sign_up' do
    @userfirstname = params [:user_firstname]
    @usersecondname = params [:SecondName]
    @usernumber = params [:user_number]
